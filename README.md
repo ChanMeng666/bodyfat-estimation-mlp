@@ -36,21 +36,6 @@ The objective of this project was to develop a multi-layer perceptron (MLP) mode
 - **Model Evaluation**: Evaluated model performance using MSE and R² metrics, and fine-tuned hyperparameters for optimal performance.
 - **Python Programming**: Used Python libraries such as `TensorFlow`, `Keras`, `Pandas`, `NumPy`, and `Seaborn` for building neural networks, data processing, and visualization.
 
-## How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/body-fat-estimation.git
-
-2. Install the required libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter notebook:
-   ```bash
-   jupyter notebook Body_Fat_Estimation.ipynb
-   ```
-
 ## Conclusion
 
 This project showcases my ability to develop effective neural network models for health-related applications, optimize model performance, and provide insights on feature importance for real-world datasets. The reduced-input model highlights the potential for a cost-effective and efficient solution in body fat estimation.
