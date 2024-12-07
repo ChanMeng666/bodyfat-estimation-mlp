@@ -1,41 +1,100 @@
-# Body Fat Estimation Using Neural Networks
+<div align="center">
+ <h1>Body Fat Prediction using Neural Networks</h1>
+ <img src="https://img.shields.io/badge/TensorFlow-2.0+-FF6F00?style=flat&logo=tensorflow&logoColor=white"/>
+ <img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=flat&logo=python&logoColor=white"/>
+ <img src="https://img.shields.io/badge/Keras-2.0+-D00000?style=flat&logo=keras&logoColor=white"/>
+ <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white"/>
+ <img src="https://img.shields.io/badge/License-MIT-green?style=flat"/>
+</div>
+<br/>
 
-This repository contains the code and analysis for estimating body fat percentage using feed-forward neural networks. The project is a case study for predicting body fat based on various physical measurements. The task was completed as part of the COMP 627: Neural Networks and Applications course. This project demonstrates my expertise in building and optimizing neural networks for real-world health-related datasets.
+This project implements advanced neural network models for accurate prediction of body fat percentage using anthropometric measurements. Through comprehensive analysis and optimization, we've developed both full-feature and reduced-input models that achieve high accuracy while maintaining practical applicability.
 
-## Overview
+# Features
 
-The objective of this project was to develop a multi-layer perceptron (MLP) model to estimate body fat percentage using physical measurements like body density, age, weight, and several circumference measurements (abdomen, chest, hip, etc.). Body fat percentage is a critical indicator of health, but direct measurement methods are costly and inconvenient. Therefore, the goal was to build a model that could estimate body fat based on easily measurable attributes.
+### 🧠 Advanced Neural Architecture
+- Multi-layer perceptron models with optimized hidden layer configurations
+- Support for both comprehensive and reduced-input feature sets
+- Adaptive learning with early stopping and optimization
 
-### Key Features:
-- **Exploratory Data Analysis**: Conducted qualitative and quantitative analysis of input features through visualization (scatter plots, heatmaps) and statistical correlation (correlation matrices).
-- **Feed-Forward Neural Network**: Developed MLP models with varying hidden layer sizes (5, 10, and 20 neurons), using Sigmoid activation functions and Adam optimization.
-- **Performance Evaluation**: Compared models based on Mean Squared Error (MSE) and R² scores for training, validation, and test sets to select the best performing network.
-- **Feature Selection**: Identified the most influential attributes (e.g., abdomen, chest, hip circumference) through correlation analysis and built a reduced-input model for a more efficient network with fewer measurements.
+### 📊 Comprehensive Analysis Suite
+- Detailed correlation analysis of body measurements
+- Feature importance evaluation through sensitivity analysis
+- Extensive model performance comparisons
 
-## Repository Structure
+### 🎯 High Prediction Accuracy
+- R² score of 0.9724 for full-feature model
+- MSE as low as 1.9250 on test data
+- Robust performance across different body types
 
-- `Body_Fat_Estimation.ipynb`: Jupyter notebook containing the Python code used for the model development, data analysis, and visualizations.
-- `data/`: Contains the dataset used for training the models (`Body_Fat.csv`).
-- `results/`: Includes plots and performance metrics from various model configurations.
-- `Assignment_Report.pdf`: A detailed report summarizing the methodology, results, and insights from the neural network experiments.
+### 💡 Smart Feature Selection
+- Intelligent reduction of input measurements
+- Maintains high accuracy with fewer required measurements
+- Practical implementation considerations
 
-## Key Insights
+### 📈 Performance Visualization
+- Detailed performance metrics and comparisons
+- Feature correlation heatmaps
+- Model sensitivity analysis plots
 
-1. **Correlation Analysis**: Abdomen circumference was identified as the most influential predictor of body fat percentage, with a correlation of 0.81, followed by chest and hip circumferences.
-   
-2. **Neural Network Models**: 
-   - The best-performing model with all input features used 20 neurons in the hidden layer, achieving an R² score of 0.9941 on the test set and an MSE of 0.2723.
-   - The reduced model, using only the most significant features, achieved similar performance with fewer neurons and a simpler architecture, making it a cost-effective alternative.
+## Getting Started
 
-3. **Cost-Effective Model**: A smaller input model with only 9 key attributes and 5 neurons in the hidden layer performed exceptionally well, reducing data collection costs while maintaining high prediction accuracy (R² = 0.9950, MSE = 0.2340).
+1. Clone the repository:
+```bash
+git clone https://github.com/ChanMeng666/bodyfat-estimation-mlp.git
+cd bodyfat-estimation-mlp
+```
 
-## Skills Demonstrated
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
 
-- **Neural Network Design**: Proficient in developing and tuning MLP models, including feature selection and architecture optimization.
-- **Data Analysis and Visualization**: Applied advanced data exploration techniques to uncover insights and relationships between features.
-- **Model Evaluation**: Evaluated model performance using MSE and R² metrics, and fine-tuned hyperparameters for optimal performance.
-- **Python Programming**: Used Python libraries such as `TensorFlow`, `Keras`, `Pandas`, `NumPy`, and `Seaborn` for building neural networks, data processing, and visualization.
+3. Run the Jupyter notebooks:
+```bash
+jupyter notebook
+```
 
-## Conclusion
+## Model Performance
 
-This project showcases my ability to develop effective neural network models for health-related applications, optimize model performance, and provide insights on feature importance for real-world datasets. The reduced-input model highlights the potential for a cost-effective and efficient solution in body fat estimation.
+| Model Type    | R² Score | MSE    | Hidden Layers |
+| ------------- | -------- | ------ | ------------- |
+| Full Input    | 0.9724   | 1.9250 | 20            |
+| Reduced Input | 0.9617   | 2.6734 | 5             |
+
+## Tech Stack
+![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-%23F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
+
+## Project Structure
+```
+├── notebooks/
+│   ├── Part3_(i)_Qualitative_Analysis.ipynb
+│   ├── Part3_(ii)_Network_Performance.ipynb
+│   ├── Part3_(iii)_Correlation_Analysis.ipynb
+│   ├── Part3_(iv)_Reduced_Input_Model.ipynb
+│   ├── Part3_(v)_Sensitivity_Analysis.ipynb
+│   ├── Part3_(vi)_Performance_Comparison.ipynb
+│   └── Part3_(vii)_Summary.ipynb
+├── data/
+│   └── Body_Fat.csv
+├── models/
+│   ├── best_full_model.keras
+│   └── best_reduced_model.keras
+├── requirements.txt
+└── README.md
+```
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+- Dataset sourced from clinical body composition measurements
+- Research methodology based on neural network optimization techniques
+- Performance metrics and analysis methods from established machine learning practices
+
+For detailed implementation and analysis, please refer to the individual notebooks in the repository.
