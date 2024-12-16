@@ -10,12 +10,11 @@
 
 This project implements advanced neural network models for accurate prediction of body fat percentage using anthropometric measurements. Through comprehensive analysis and optimization, we've developed both full-feature and reduced-input models that achieve high accuracy while maintaining practical applicability.
 
-# Hugging Face Model Repository
-https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp
-
-<a href="https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
-  <img src="https://img.shields.io/badge/Model-gray?style=for-the-badge&logo=huggingface"/>
-</a>
+<div align="center">
+  <a href="https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
+    <img src="https://img.shields.io/badge/Model-gray?style=for-the-badge&logo=huggingface"/>
+  </a>
+</div>
 
 # Features
 
