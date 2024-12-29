@@ -104,3 +104,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Performance metrics and analysis methods from established machine learning practices
 
 For detailed implementation and analysis, please refer to the individual notebooks in the repository.
+
+## 🙋‍♀ Author
+
+Created and maintained by [Chan Meng](https://github.com/ChanMeng666).
