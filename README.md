@@ -16,6 +16,12 @@ This project implements advanced neural network models for accurate prediction o
   </a>
 </div>
 
+<br/>
+
+[![Explore GitHub Profile README Generator](https://gradient-svg-generator.vercel.app/?text=👉+Try+It+Now!+👈&height=40&template=pride-rainbow)](https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp)
+
+<br/>
+
 # Features
 
 ### 🧠 Advanced Neural Architecture
