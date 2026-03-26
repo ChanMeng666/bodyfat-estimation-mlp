@@ -2,8 +2,8 @@ name: Update License Year
 
 on:
   schedule:
-    - cron: '0 0 1 1 *'  # 每年1月1日运行
-  workflow_dispatch:      # 允许手动触发
+    - cron: '0 0 1 1 *'  # Run annually on January 1st
+  workflow_dispatch:      # Allow manual trigger
 
 jobs:
   update-license-year:
@@ -21,20 +21,20 @@ jobs:
           CURRENT_YEAR=$(date +%Y)
           echo "CURRENT_YEAR=$CURRENT_YEAR" >> $GITHUB_ENV
           
-          # 调试输出
+          # Debug output
           echo "Current content of LICENSE file:"
           cat LICENSE
           echo "Current year: $CURRENT_YEAR"
           
-          # 更新年份 - 支持多种格式
+          # Update year - supports multiple formats
           if [ -f LICENSE ]; then
-            # 更新 "Copyright (c) YYYY" 格式
+            # Update "Copyright (c) YYYY" format
             sed -i -E "s/Copyright \(c\) [0-9]{4}/Copyright (c) ${CURRENT_YEAR}/" LICENSE
             
-            # 更新 "Copyright (c) YYYY-YYYY" 格式
+            # Update "Copyright (c) YYYY-YYYY" format
             sed -i -E "s/Copyright \(c\) [0-9]{4}-[0-9]{4}/Copyright (c) ${CURRENT_YEAR}/" LICENSE
             
-            # 更新 "Copyright YYYY" 格式
+            # Update "Copyright YYYY" format
             sed -i -E "s/Copyright [0-9]{4}/Copyright ${CURRENT_YEAR}/" LICENSE
             
             echo "Updated content of LICENSE file:"
