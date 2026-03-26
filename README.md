@@ -306,5 +306,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-chanmeng666-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/chanmeng666/)
 [![GitHub](https://img.shields.io/badge/GitHub-ChanMeng666-181717?style=flat-square&logo=github)](https://github.com/ChanMeng666)
 [![Email](https://img.shields.io/badge/Email-chanmeng.dev-EA4335?style=flat-square&logo=gmail)](mailto:chanmeng.dev@gmail.com)
-[![Website](https://img.shields.io/badge/Website-chanmeng.live-0078D4?style=flat-square&logo=safari)](https://chanmeng.live)
+[![Website](https://img.shields.io/badge/Website-chanmeng.org-0078D4?style=flat-square&logo=safari)](https://chanmeng.org/)
 </div>
