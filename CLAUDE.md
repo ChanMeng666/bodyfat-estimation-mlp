@@ -15,7 +15,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install tensorflow pandas numpy scikit-learn matplotlib seaborn jupyter
+pip install -r requirements.txt
 ```
 
 ### Running Analysis
@@ -31,30 +31,31 @@ jupyter lab
 ```python
 # Load pre-trained models
 from tensorflow.keras.models import load_model
-full_model = load_model('best_full_model.keras')
-optimized_model = load_model('best_selected_features_model.keras')
+full_model = load_model('models/best_full_model.keras')
+optimized_model = load_model('models/best_selected_features_model.keras')
 
 # Load dataset
 import pandas as pd
-df = pd.read_csv('Body_Fat.csv')
+df = pd.read_csv('data/body_fat.csv')
 ```
 
 ## Repository Architecture
 
 ### Core Components
-- **Analysis Notebooks**: Seven-part comprehensive analysis workflow
-  - Part (i): Qualitative analysis with visualization
-  - Part (ii): Network performance optimization
-  - Part (iii): Correlation analysis
-  - Part (iv): Reduced input model development
-  - Part (v): Sensitivity analysis
-  - Part (vi): Performance comparison
-  - Part (vii): Summary and conclusions
+- **Analysis Notebooks** (`notebooks/`): Seven-part comprehensive analysis workflow
+  - `01_qualitative_analysis.ipynb`: Qualitative analysis with visualization
+  - `02_network_performance.ipynb`: Network performance optimization
+  - `03_correlation_analysis.ipynb`: Correlation analysis
+  - `04_reduced_input_model.ipynb`: Reduced input model development
+  - `05_sensitivity_analysis.ipynb`: Sensitivity analysis
+  - `06_performance_comparison.ipynb`: Performance comparison
+  - `07_summary_and_conclusions.ipynb`: Summary and conclusions
 
-- **Data**: `Body_Fat.csv` - 252 anthropometric measurements with 14 features
-- **Models**: Pre-trained Keras models (.keras format)
+- **Data** (`data/`): `body_fat.csv` - 252 anthropometric measurements with 14 features
+- **Models** (`models/`): Pre-trained Keras models (.keras format)
   - `best_full_model.keras` - 20 neurons, all 14 features, R² = 0.9724
   - `best_selected_features_model.keras` - 5 neurons, 9 features, R² = 0.9950
+- **Figures** (`figures/`): Visualization outputs (correlation heatmap, feature charts)
 
 ### Model Architecture
 - **Input Features**: Age, Weight, Height, Neck, Chest, Abdomen, Hip, Thigh, Knee, Ankle, Biceps, Forearm, Wrist, Density
@@ -83,11 +84,14 @@ Excluded weak predictors: Height, Ankle, Age, Wrist, Forearm
 ## Working with the Codebase
 
 ### Notebook Execution Order
-Run notebooks sequentially for complete analysis:
-1. Start with qualitative analysis (Part i)
-2. Proceed through network optimization (Part ii)
-3. Continue with correlation and feature analysis (Parts iii-iv)
-4. Complete with sensitivity and comparison analysis (Parts v-vii)
+Run notebooks sequentially from `notebooks/` for complete analysis:
+1. `01_qualitative_analysis.ipynb` — Visual exploration
+2. `02_network_performance.ipynb` — Network optimization
+3. `03_correlation_analysis.ipynb` — Correlation testing
+4. `04_reduced_input_model.ipynb` — Feature selection
+5. `05_sensitivity_analysis.ipynb` — Feature importance
+6. `06_performance_comparison.ipynb` — Model comparison
+7. `07_summary_and_conclusions.ipynb` — Summary
 
 ### Model Training Workflow
 ```python
@@ -159,10 +163,10 @@ git commit -m "docs: update API documentation"
 python -m pytest tests/ -v
 
 # Test model loading and prediction
-python -c "from tensorflow.keras.models import load_model; model = load_model('best_full_model.keras'); print('Model loaded successfully')"
+python -c "from tensorflow.keras.models import load_model; model = load_model('models/best_full_model.keras'); print('Model loaded successfully')"
 
 # Validate data pipeline
-python -c "import pandas as pd; df = pd.read_csv('Body_Fat.csv'); print(f'Dataset loaded: {df.shape}')"
+python -c "import pandas as pd; df = pd.read_csv('data/body_fat.csv'); print(f'Dataset loaded: {df.shape}')"
 ```
 
 ## Research Context

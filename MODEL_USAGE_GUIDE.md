@@ -41,7 +41,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 # Load the original training data to fit the scaler
-df = pd.read_csv("/app/repo/Body_Fat.csv")
+df = pd.read_csv("data/body_fat.csv")
 X_training = df.drop('BodyFat', axis=1)
 
 # Fit scaler on training data (must match exactly how it was done during training)
@@ -49,7 +49,7 @@ scaler = MinMaxScaler()
 scaler.fit(X_training)
 
 # Load the trained model
-model = keras.models.load_model("/app/repo/best_full_model.keras")
+model = keras.models.load_model("models/best_full_model.keras")
 
 def predict(measures: list[float]) -> float:
     """
